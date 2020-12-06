@@ -81,6 +81,7 @@
       "quantity": Number
     }
   ],
+  "numberOfDistinctProducts": Number,
   "totalPrice": Number
 }
 ```

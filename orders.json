@@ -7,6 +7,22 @@
         "quantity": 2
       }
     ],
+    "numberOfDistinctProducts": 1,
     "totalPrice": 24
+  },
+  {
+    "user": "5fccbba69e555298bd0642d0",
+    "products": [
+      {
+        "productId": "5fccc504ed37c2a09d6db86a",
+        "quantity": 2
+      },
+      {
+        "productId": "5fccc504ed37c2a09d6db867",
+        "quantity": 1
+      }
+    ],
+    "numberOfDistinctProducts": 2,
+    "totalPrice": 33
   }
 ]
