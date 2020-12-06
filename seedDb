@@ -18,7 +18,10 @@ const client = new MongoClient($1);
 let db;
 
 async function clearCollections() {
-  const existingCollections = await db.collections();
+  const existingCollections = (
+    await (await db.listCollections({}, { nameOnly: true })).toArray()
+  ).map((c) => c.name);
+  console.log(existingCollections);
   for (const collectionName in seeds) {
     if (existingCollections.find((c) => c === collectionName)) {
       try {
