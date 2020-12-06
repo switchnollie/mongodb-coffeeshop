@@ -1,5 +1,8 @@
 #!/usr/bin/env -S ESM_OPTIONS='{mode:"all",cache:0}' node -r esm
 import { exec } from "child_process";
+import path from "path";
+import fs from "fs";
+
 export const [
   ,
   ,
@@ -8,8 +11,15 @@ export const [
   $2 = "coffeeShop",
 ] = process.argv;
 
-export const run = () => {
-  const shellCommand = `mongo --eval "var databaseName='${$2}', connection='${$1}'" ./exercises/printCursor.js ./exercises/connect.js ./exercises/${scriptName}.js`;
+export const run = async () => {
+  const globalsDir = path.join(".", "exercises", "shared/");
+  const globalFileNames = await fs.readdirSync(globalsDir);
+  const globalFilePaths = globalFileNames.map((dep) =>
+    path.join(globalsDir, dep)
+  );
+  const shellCommand = `mongo --eval "var databaseName='${$2}', connection='${$1}'" ${globalFilePaths.join(
+    " "
+  )} exercises/${scriptName}.js`;
   console.log("Executing ", shellCommand);
   exec(shellCommand, (error, stdout, stderr) => {
     console.log(stdout);
