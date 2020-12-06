@@ -3,14 +3,22 @@
 ## Setup
 
 - Node.js >= v14 is required (The scripts are using the Node.js MongoDB Driver API)
+- Run `npm i` in this directory to install all required dependencies
+- Make the node scripts executable `chmod -x run seedDb`
 
 ## Scripts
 
-- The first argument is always the connection string. If it is not provided, `mongdb://localhost` is used
+- Seeding can be executed with `./seedDb` and optionally the connection string as first and the database name as second argument
+- Exercises can be executed with `./run <execiseNumber>` and optionally the connection string as first and the database name as second argument
 
-| Script Name | Description                                                                                                                   |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `seedDb`    | Clears the collections and seeds the database that is provided as second argument or `coffeeshop` by default with sample Data |
+- default values:
+  - connection: `mongodb://localhost`
+  - databaseName: `coffeeShop`
+
+| Script Name            | Description                                                                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `seedDb`               | Clears the collections and seeds the database that is provided as second argument or `coffeeshop` by default with sample Data |
+| `run <exerciseNumber>` | Runs the example under `./examples/<exerciseNumber>.js`                                                                       |
 
 ## Database "Schema"
 
@@ -69,7 +77,7 @@
   "user": Reference,
   "products": [
     {
-      "id": Reference,
+      "productId": Reference,
       "quantity": Number
     }
   ],

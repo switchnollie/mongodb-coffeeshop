@@ -1,8 +1,6 @@
 {
   "files.associations": {
-    "*.json": "json",
-    "*": "javascript",
-    ".*": "none",
-    "*.md": "markdown"
+    "seedDb": "javascript",
+    "run": "javascript",
   }
 }

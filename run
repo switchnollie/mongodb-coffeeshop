@@ -1,0 +1,23 @@
+#!/usr/bin/env -S ESM_OPTIONS='{mode:"all",cache:0}' node -r esm
+import { exec } from "child_process";
+export const [
+  ,
+  ,
+  scriptName,
+  $1 = "mongodb://localhost",
+  $2 = "coffeeShop",
+] = process.argv;
+
+export const run = () => {
+  const shellCommand = `mongo --eval "var databaseName='${$2}', connection='${$1}'" ./exercises/${scriptName}.js`;
+  console.log("Executing ", shellCommand);
+  exec(shellCommand, (error, stdout, stderr) => {
+    console.log(stdout);
+    console.log(stderr);
+    if (error !== null) {
+      console.log(`exec error: ${error}`);
+    }
+  });
+};
+
+run();
