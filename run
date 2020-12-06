@@ -9,7 +9,7 @@ export const [
 ] = process.argv;
 
 export const run = () => {
-  const shellCommand = `mongo --eval "var databaseName='${$2}', connection='${$1}'" ./exercises/${scriptName}.js`;
+  const shellCommand = `mongo --eval "var databaseName='${$2}', connection='${$1}'" ./exercises/connect.js ./exercises/${scriptName}.js`;
   console.log("Executing ", shellCommand);
   exec(shellCommand, (error, stdout, stderr) => {
     console.log(stdout);
