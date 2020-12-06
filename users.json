@@ -1,0 +1,112 @@
+[
+  {
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "city": "Gwenborough",
+      "postCode": "92998-3874",
+      "houseNumber": 999
+    },
+    "phone": "1-770-736-8031 x56442"
+  },
+  {
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "city": "Wisokyburgh",
+      "postCode": "90566-7771",
+      "houseNumber": 888
+    },
+    "phone": "010-692-6593 x09125"
+  },
+  {
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "city": "McKenziehaven",
+      "postCode": "59590-4157",
+      "houseNumber": 777
+    },
+    "phone": "1-463-123-4447"
+  },
+  {
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "city": "South Elvis",
+      "postCode": "53919-4257",
+      "houseNumber": 666
+    },
+    "phone": "493-170-9623 x156"
+  },
+  {
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "city": "Roscoeview",
+      "postCode": "33263",
+      "houseNumber": 555
+    },
+    "phone": "(254)954-1289"
+  },
+  {
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "city": "South Christy",
+      "postCode": "23505-1337",
+      "houseNumber": 444
+    },
+    "phone": "1-477-935-8478 x6430"
+  },
+  {
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "city": "Howemouth",
+      "postCode": "58804-1099",
+      "houseNumber": 333
+    },
+    "phone": "210.067.6132"
+  },
+  {
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "city": "Aliyaview",
+      "postCode": "45169",
+      "houseNumber": 222
+    },
+    "phone": "586.493.6943 x140"
+  },
+  {
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "city": "Bartholomebury",
+      "postCode": "76495-3109",
+      "houseNumber": 111
+    },
+    "phone": "(775)976-6794 x41206"
+  },
+  {
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "city": "Lebsackbury",
+      "postCode": "31428-2261",
+      "houseNumber": 123
+    },
+    "phone": "024-648-3804"
+  }
+]

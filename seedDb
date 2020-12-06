@@ -1,0 +1,57 @@
+#!/usr/bin/env -S ESM_OPTIONS='{mode:"all",cache:0}' /usr/bin/env node -r esm
+
+import { MongoClient } from "mongodb";
+import usersSeed from "./users.json";
+
+const [, , $1 = "mongodb://localhost", $2 = "coffeeShop"] = process.argv;
+const seeds = {
+  users: usersSeed,
+};
+const client = new MongoClient($1);
+
+let db;
+
+async function clearCollections() {
+  const existingCollections = await db.collections();
+  for (const collectionName in seeds) {
+    if (existingCollections.find((c) => c === collectionName)) {
+      try {
+        await db.collection(collectionName).drop();
+      } catch (e) {
+        console.error("Failed dropping existing collections");
+        throw e;
+      }
+    } else {
+      console.log(`Collection ${collectionName} not present in database ${$2}`);
+    }
+  }
+}
+
+async function insertSeedCollections() {
+  let batchInsert = [];
+  for (const [collectionName, jsonSeed] of Object.entries(seeds)) {
+    batchInsert.push(db.collection(collectionName).insertMany(jsonSeed));
+  }
+  try {
+    await Promise.all(batchInsert);
+  } catch (e) {
+    console.error("Failed inserting collection seeds");
+    throw e;
+  }
+}
+
+try {
+  await client.connect();
+  console.log("Connection successful");
+  db = client.db($2);
+  console.log("Cleaning up existing database...");
+  await clearCollections();
+  console.log("Successfully dropped all collections");
+  console.log(`Seeding database with collections ${Object.keys(seeds)}...`);
+  await insertSeedCollections();
+  console.log("Successfully seeded all collections");
+} catch (err) {
+  console.dir(err);
+} finally {
+  client.close();
+}

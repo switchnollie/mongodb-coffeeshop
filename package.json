@@ -1,0 +1,12 @@
+{
+  "name": "mongodb-exercise",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "esm": "^3.2.25",
+    "mongodb": "^3.6.3"
+  },
+  "esm": {
+    "await": true
+  }
+}
