@@ -11,3 +11,67 @@
 | Script Name | Description                                                                                                                   |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `seedDb`    | Clears the collections and seeds the database that is provided as second argument or `coffeeshop` by default with sample Data |
+
+## Database "Schema"
+
+- MongoDB is schemaless, this is the intended Document Structure
+
+### users Collection
+
+```json
+{
+  "_id": ObjectID,
+  "username": String,
+  "email": String,
+  "phone": String, // optional
+  "address": {
+    "street": String,
+    "houseNumber": number,
+    "postCode": number,
+    "city": String
+  }
+}
+```
+
+### products Collection
+
+```json
+{
+  "_id": ObjectID,
+  "name": String,
+  "strength": Number,
+  "price": Number,
+  "supplier": {
+    "_id": ObjectID,
+    "name": String,
+    "address": String
+  },
+  "inStock": Boolean
+}
+```
+
+### suppliers Collection
+
+```json
+{
+  "_id": ObjectID,
+  "name": String,
+  "address": String
+}
+```
+
+### orders Collection
+
+```json
+{
+  "_id": ObjectID,
+  "user": Reference,
+  "products": [
+    {
+      "id": Reference,
+      "quantity": Number
+    }
+  ],
+  "totalPrice": Number
+}
+```
