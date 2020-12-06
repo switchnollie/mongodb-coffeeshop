@@ -21,7 +21,6 @@ async function clearCollections() {
   const existingCollections = (
     await (await db.listCollections({}, { nameOnly: true })).toArray()
   ).map((c) => c.name);
-  console.log(existingCollections);
   for (const collectionName in seeds) {
     if (existingCollections.find((c) => c === collectionName)) {
       try {
