@@ -20,7 +20,7 @@
     "name": "Excelsa",
     "strength": "stark",
     "price": 22,
-    "supplier": "Dallmayr",
+    "supplier": "Nestle",
     "inStock": false
   },
   {
@@ -44,7 +44,7 @@
     "name": "Kopi Luwak",
     "strength": "mild",
     "price": 63,
-    "supplier": "Nestle",
+    "supplier": "Dallmayr",
     "inStock": true
   }
 ]
