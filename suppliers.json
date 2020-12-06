@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Nestle",
+    "address": {
+      "street": "Avenue Nestlé",
+      "houseNumber": 55,
+      "postCode": 1800,
+      "city": "Vevey"
+    }
+  },
+  {
+    "name": "Dallmayr",
+    "address": {
+      "street": "Dienerstr",
+      "houseNumber": 14,
+      "postCode": 80331,
+      "city": "München"
+    }
+  }
+]

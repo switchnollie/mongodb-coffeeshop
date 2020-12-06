@@ -52,7 +52,12 @@
 {
   "_id": ObjectID,
   "name": String,
-  "address": String
+  "address": {
+    "street": String,
+    "houseNumber": number,
+    "postCode": number,
+    "city": String
+  }
 }
 ```
 

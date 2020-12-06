@@ -17,21 +17,21 @@
     "name": "Excelsa",
     "strength": "stark",
     "price": 22,
-    "supplier": "Dalmayr",
+    "supplier": "Dallmayr",
     "inStock": false
   },
   {
     "name": "Liberica",
     "strength": "mild",
     "price": 12,
-    "supplier": "Dalmayr",
+    "supplier": "Dallmayr",
     "inStock": false
   },
   {
     "name": "Maragogype",
     "strength": "mild",
     "price": 12,
-    "supplier": "Dalmayr",
+    "supplier": "Dallmayr",
     "inStock": true
   },
   {
