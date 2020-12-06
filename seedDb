@@ -1,4 +1,4 @@
-#!/usr/bin/env -S ESM_OPTIONS='{mode:"all",cache:0}' /usr/bin/env node -r esm
+#!/usr/bin/env -S ESM_OPTIONS='{mode:"all",cache:0}' node -r esm
 
 import { MongoClient } from "mongodb";
 import usersSeed from "./users.json";
