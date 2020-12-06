@@ -14,7 +14,7 @@
 
 ## Database "Schema"
 
-- MongoDB is schemaless, this is the intended Document Structure
+> MongoDB is schemaless, this is the intended Document Structure
 
 ### users Collection
 
@@ -39,13 +39,9 @@
 {
   "_id": ObjectID,
   "name": String,
-  "strength": Number,
+  "strength": String, // "mild" | "stark"
   "price": Number,
-  "supplier": {
-    "_id": ObjectID,
-    "name": String,
-    "address": String
-  },
+  "supplier": String,
   "inStock": Boolean
 }
 ```

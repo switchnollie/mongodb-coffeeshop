@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Arabica",
+    "strength": "stark",
+    "price": 8,
+    "supplier": "Nestle",
+    "inStock": true
+  },
+  {
+    "name": "Robusta",
+    "strength": "stark",
+    "price": 9,
+    "supplier": "Nestle",
+    "inStock": true
+  },
+  {
+    "name": "Excelsa",
+    "strength": "stark",
+    "price": 22,
+    "supplier": "Dalmayr",
+    "inStock": false
+  },
+  {
+    "name": "Liberica",
+    "strength": "mild",
+    "price": 12,
+    "supplier": "Dalmayr",
+    "inStock": false
+  },
+  {
+    "name": "Maragogype",
+    "strength": "mild",
+    "price": 12,
+    "supplier": "Dalmayr",
+    "inStock": true
+  },
+  {
+    "name": "Kopi Luwak",
+    "strength": "mild",
+    "price": 63,
+    "supplier": "Nestle",
+    "inStock": true
+  }
+]
