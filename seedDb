@@ -1,10 +1,10 @@
 #!/usr/bin/env -S ESM_OPTIONS='{mode:"all",cache:0}' node -r esm
 
 import { MongoClient } from "mongodb";
-import usersSeed from "./users.json";
-import productsSeed from "./products.json";
-import suppliersSeed from "./suppliers.json";
-import ordersSeed from "./orders.json";
+import usersSeed from "./sampleData/users.json";
+import productsSeed from "./sampleData/products.json";
+import suppliersSeed from "./sampleData/suppliers.json";
+import ordersSeed from "./sampleData/orders.json";
 
 const [, , $1 = "mongodb://localhost", $2 = "coffeeShop"] = process.argv;
 const seeds = {
