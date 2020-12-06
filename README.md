@@ -18,7 +18,7 @@
 
 ### users Collection
 
-```json
+```js
 {
   "_id": ObjectID,
   "username": String,
@@ -35,7 +35,7 @@
 
 ### products Collection
 
-```json
+```js
 {
   "_id": ObjectID,
   "name": String,
@@ -52,7 +52,7 @@
 
 ### suppliers Collection
 
-```json
+```js
 {
   "_id": ObjectID,
   "name": String,
@@ -62,7 +62,7 @@
 
 ### orders Collection
 
-```json
+```js
 {
   "_id": ObjectID,
   "user": Reference,
