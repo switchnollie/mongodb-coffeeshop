@@ -13,6 +13,4 @@ bigOrders = db.orders.find(
   }
 );
 
-while (bigOrders.hasNext()) {
-  printjson(bigOrders.next());
-}
+printCursor(bigOrders);

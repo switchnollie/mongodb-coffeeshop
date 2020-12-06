@@ -5,6 +5,4 @@ expensiveProductsNoNestle = db.products.find({
   inStock: { $eq: true },
 });
 
-while (expensiveProductsNoNestle.hasNext()) {
-  printjson(expensiveProductsNoNestle.next());
-}
+printCursor(expensiveProductsNoNestle);
