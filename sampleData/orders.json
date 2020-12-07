@@ -31,10 +31,14 @@
       {
         "productId": "5fccc504ed37c2a09d6db869",
         "quantity": 3
+      },
+      {
+        "productId": "5fccc504ed37c2a09d6db86b",
+        "quantity": 1
       }
     ],
-    "numberOfDistinctProducts": 1,
-    "totalPrice": 36
+    "numberOfDistinctProducts": 2,
+    "totalPrice": 99
   },
   {
     "user": "1",
