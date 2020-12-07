@@ -17,7 +17,8 @@ export const run = async () => {
   const globalFilePaths = globalFileNames.map((dep) =>
     path.join(globalsDir, dep)
   );
-  const shellCommand = `mongo --eval "var databaseName='${$2}', connection='${$1}'" ${globalFilePaths.join(
+  const globalVars = `var databaseName='${$2}', connection='${$1}'`;
+  const shellCommand = `mongo --eval "${globalVars}" ${globalFilePaths.join(
     " "
   )} exercises/${scriptName}.js`;
   console.log("Executing ", shellCommand);
