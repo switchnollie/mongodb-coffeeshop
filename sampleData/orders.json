@@ -35,5 +35,16 @@
     ],
     "numberOfDistinctProducts": 1,
     "totalPrice": 36
+  },
+  {
+    "user": "1",
+    "products": [
+      {
+        "productId": "5fccc504ed37c2a09d6db86b",
+        "quantity": 5
+      }
+    ],
+    "numberOfDistinctProducts": 1,
+    "totalPrice": 315
   }
 ]
