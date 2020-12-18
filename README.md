@@ -9,7 +9,7 @@
 ## Scripts
 
 - Seeding can be executed with `./seedDb` and optionally the connection string as first and the database name as second argument
-- Exercises can be executed with `./run <execiseNumber>` and optionally the connection string as first and the database name as second argument
+- Exercises can be executed with `./run <execiseNumber>` and optionally the connection string as first and the database name as second argument e.g. `./run 01`
 
 - default values:
   - connection: `mongodb://localhost`
