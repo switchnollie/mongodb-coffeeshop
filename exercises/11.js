@@ -1,15 +1,28 @@
+// With denormalized numberOfDistinctProducts field:
+// bigOrders = db.orders.find(
+//   {
+//     numberOfDistinctProducts: {
+//       $gt: 1,
+//     },
+//   },
+//   {
+//     user: true,
+//     products: {
+//       productId: true,
+//     },
+//     totalPrice: true,
+//   }
+// );
+
 bigOrders = db.orders.find(
   {
-    numberOfDistinctProducts: {
-      $gte: 2,
-    },
+    "products.1": { $exists: true },
   },
   {
+    _id: false,
     user: true,
-    products: {
-      productId: true,
-    },
     totalPrice: true,
+    "products.productId": true,
   }
 );
 

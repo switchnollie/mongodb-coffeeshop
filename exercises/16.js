@@ -4,4 +4,11 @@ maxQuantity = db.orders.aggregate([
   { $project: { maxQuantity: 1, _id: 0 } },
 ]);
 
+// Alternative ohne unwind:
+// maxQuantity = db.orders.aggregate([
+//   {
+//   $group: { _id: null, max: {$max: "$products.quantity"}}
+//   }
+// ])
+
 printCursor(maxQuantity);
